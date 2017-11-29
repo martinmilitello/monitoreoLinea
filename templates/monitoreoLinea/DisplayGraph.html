@@ -1,0 +1,56 @@
+<html>
+
+<head>
+     <script src ="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+     <script src ="http://code.highcharts.com/highcharts.js"></script>
+
+     {% load chartit %}
+     {{Cajas|load_charts:"container" }}
+
+    <script>
+        function recarga(){
+        location.href=location.href
+}        setInterval('recarga()',5000)
+    </script>
+
+</head>
+
+<body>
+
+     <table class="table table-striped">
+         <tr>
+
+                <div id = "container">
+                    <div id="container"> Chart will be rendered here </div>
+                </div>
+
+         </tr>
+     </table>
+
+     <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Material</th>
+                <th>Cant</th>
+                <th>HoraAct</th>
+            </tr>
+        </thead>
+
+        {% for dato in DatoBase %}
+        <tbody>
+            <tr>
+                <td>{{ dato.Fecha}}</td>
+                <td>{{ dato.Hora }}</td>
+                <td>{{ dato.Mat_Caja }}</td>
+                <td>{{ dato.Cant }}</td>
+                <td>{{ dato.HoraAct }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+</body>
+</html>

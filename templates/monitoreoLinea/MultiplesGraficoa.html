@@ -1,0 +1,18 @@
+<html>
+
+<head>
+     <script src ="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+     <script src ="http://code.highcharts.com/highcharts.js"></script>
+
+     {% load chartit %}
+     {{Lista_Graficos|load_charts:"chart_1,chart_2" }}
+
+</head>
+
+<body>
+
+        <div id="chart_1">First chart will be rendered here</div>
+        <div id="chart_2">Second chart will be rendered here</div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+
+        <title>Django Aplicacion Monitoreo de Linea Violetta</title>
+
+         <script src ="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+         <script src ="http://code.highcharts.com/highcharts.js"></script>
+
+
+
+    </head>
+    <body>
+
+         <div>
+            <p>{{ posts }} </p>
+
+
+            <div>
+                <h2><a href="/DisplayGraph/">DisplayGraph</a></h2>
+                <h2><a href="/Cajas_chart_view/">Linea Simple Cajas x Hora</a></h2>
+                <h2><a href="/Dos_Graficos/">Dos gráficos</a></h2>
+
+            </div>
+
+            {% load static %}
+
+            <img src="{% static "img//wizard-256.png" %}" alt="Imagen1"/>
+        </div>
+    </body>
+</html>
